@@ -19,7 +19,7 @@
 <script>
 
 document.getElementById('yes-btn').addEventListener('click', function() {
-    document.getElementById('response').innerHTML = "i love u 💖. come to my house 6pm";
+    document.getElementById('response').innerHTML = "Yay! You made my day 💖";
 });
 
 const noResponses = [
@@ -30,12 +30,22 @@ const noResponses = [
     "i hate you"
 ];
 
+// Initial size of the "No" button
+let noButtonSize = 16; // Starting font size in pixels
+
 document.getElementById('no-btn').addEventListener('click', function() {
     const randomIndex = Math.floor(Math.random() * noResponses.length);
     document.getElementById('response').innerHTML = noResponses[randomIndex];
+    
+    // Increase the button size
+    noButtonSize += 2; // Increase font size by 2 pixels
+    this.style.fontSize = `${noButtonSize}px`; // Apply the new size
+    // Optionally, adjust padding for better visual effect
+    this.style.padding = `${10 + (noButtonSize - 16) / 2}px ${20 + (noButtonSize - 16) / 2}px`;
 });
 
 </script>
 
 </html>
+
 
