@@ -31,17 +31,17 @@ const noResponses = [
 ];
 
 // Initial size of the "No" button
-let yesButtonSize = 16; // Starting font size in pixels
+let noButtonSize = 16; // Starting font size in pixels
 
-document.getElementById('yes-btn').addEventListener('click', function() {
-    const randomIndex = Math.floor(Math.random() * yesResponses.length);
-    document.getElementById('response').innerHTML = yesResponses[randomIndex];
+document.getElementById('no-btn').addEventListener('click', function() {
+    const randomIndex = Math.floor(Math.random() * noResponses.length);
+    document.getElementById('response').innerHTML = noResponses[randomIndex];
     
     // Increase the button size
-    yesButtonSize += 2; // Increase font size by 2 pixels
-    this.style.fontSize = `${yesButtonSize}px`; // Apply the new size
+    noButtonSize += 2; // Increase font size by 2 pixels
+    this.style.fontSize = `${noButtonSize}px`; // Apply the new size
     // Optionally, adjust padding for better visual effect
-    this.style.padding = `${10 + (yesButtonSize - 16) / 2}px ${20 + (yesButtonSize - 16) / 2}px`;
+    this.style.padding = `${10 + (noButtonSize - 16) / 2}px ${20 + (noButtonSize - 16) / 2}px`;
 });
 
 </script>
